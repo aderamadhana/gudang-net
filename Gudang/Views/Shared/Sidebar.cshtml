@@ -1,0 +1,67 @@
+﻿@{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+    var action = ViewContext.RouteData.Values["action"]?.ToString();
+}
+<aside class="sidebar d-none d-lg-flex p-3">
+    <div class="d-flex flex-column w-100">
+        <div class="nav-section">Home</div>
+        <a class="nav-link @(controller == "Home" ? "active" : "")" href="#"><i class="bi bi-grid-1x2"></i> Dashboard</a>
+
+        <div class="nav-section">Master dan Konfigurasi</div>
+        <div class="has-submenu">
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="konfigurasi">
+                <i class="bi bi-send-check"></i> Konfigurasi
+                <span class="arrow"><i class="bi bi-caret-down-fill"></i></span>
+            </button>
+            <div class="submenu" id="konfigurasi">
+                <a class="nav-link" href="#">User</a>
+                <a class="nav-link" href="#">Role</a>
+                <a class="nav-link" href="#">Menu</a>
+            </div>
+        </div>
+
+        <div class="has-submenu">
+            <button class="submenu-toggle" type="button" aria-expanded="true" aria-controls="master">
+                <i class="bi bi-fingerprint"></i> Master
+                <span class="arrow"><i class="bi bi-caret-down-fill"></i></span>
+            </button>
+            <div class="submenu" id="master">
+                <a class="nav-link" href="#">Barang</a>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<!-- Offcanvas (mobile) -->
+<div class="offcanvas offcanvas-start" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSidebarLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tutup"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="nav-section">Home</div>
+        <a class="nav-link @(controller == "Home" ? "active" : "")" href="#"><i class="bi bi-grid-1x2"></i> Dashboard</a>
+        <div class="nav-section">Master dan Konfigurasi</div>
+        <div class="has-submenu">
+            <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="konfigurasi">
+                <i class="bi bi-send-check"></i> Konfigurasi
+                <span class="arrow"><i class="bi bi-caret-down-fill"></i></span>
+            </button>
+            <div class="submenu" id="konfigurasi">
+                <a class="nav-link" href="#">User</a>
+                <a class="nav-link" href="#">Role</a>
+                <a class="nav-link" href="#">Menu</a>
+            </div>
+        </div>
+
+        <div class="has-submenu">
+            <button class="submenu-toggle" type="button" aria-expanded="true" aria-controls="master">
+                <i class="bi bi-fingerprint"></i> Master
+                <span class="arrow"><i class="bi bi-caret-down-fill"></i></span>
+            </button>
+            <div class="submenu" id="master">
+                <a class="nav-link" href="#">Barang</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4727,11 +4727,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\REPO\\Gudang\\Gudang\\Gudang.csproj",
+      "projectUniqueName": "D:\\REPO\\gudang-net\\Gudang\\Gudang.csproj",
       "projectName": "Gudang",
-      "projectPath": "D:\\REPO\\Gudang\\Gudang\\Gudang.csproj",
+      "projectPath": "D:\\REPO\\gudang-net\\Gudang\\Gudang.csproj",
       "packagesPath": "C:\\Users\\LENOVO LEGION 5\\.nuget\\packages\\",
-      "outputPath": "D:\\REPO\\Gudang\\Gudang\\obj\\",
+      "outputPath": "D:\\REPO\\gudang-net\\Gudang\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
