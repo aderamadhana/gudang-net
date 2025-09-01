@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --bg: #f6f7fb;
     --card: #ffffff;
     --muted: #6b7280;
@@ -269,4 +269,23 @@ html, body {
         width: 100%;
         box-shadow: none;
     }
+}
+.dataTables_filter {
+    margin-bottom: 15px;
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+/* Header */
+#myTable thead th {
+    background-color: #002f63; /* biru tua */
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ccc;
 }

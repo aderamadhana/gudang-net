@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\REPO\\gudang-net\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\views\\shared\\sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\views\\shared\\sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\views\\shared\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\views\\shared\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\views\\shared\\sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\views\\shared\\sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,65 +42,66 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Header.cshtml",
-              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Views\\Shared\\Header.cshtml",
-              "RelativeDocumentMoniker": "Gudang\\Views\\Shared\\Header.cshtml",
-              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Views\\Shared\\Header.cshtml",
-              "RelativeToolTip": "Gudang\\Views\\Shared\\Header.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-14T09:03:15.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "site.js",
-              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "Gudang\\wwwroot\\js\\site.js",
-              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "Gudang\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-08-14T08:56:47.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "Gudang\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "Gudang\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAOoAAAAAAAAAAAAqwAgBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-14T08:53:07.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Sidebar.cshtml",
-              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Views\\Shared\\Sidebar.cshtml",
-              "RelativeDocumentMoniker": "Gudang\\Views\\Shared\\Sidebar.cshtml",
-              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Views\\Shared\\Sidebar.cshtml",
-              "RelativeToolTip": "Gudang\\Views\\Shared\\Sidebar.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADQAAAAxAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Views\\Role\\Index.cshtml",
+              "RelativeDocumentMoniker": "Gudang\\Views\\Role\\Index.cshtml",
+              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Views\\Role\\Index.cshtml",
+              "RelativeToolTip": "Gudang\\Views\\Role\\Index.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFkAAAC6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-14T08:49:42.159Z",
+              "WhenOpened": "2025-09-01T03:31:27.956Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "Gudang\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "Gudang\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAABEBAAAAAAAAAADwvxwBAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-01T04:27:50.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "Gudang\\Controllers\\RoleController.cs",
+              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "Gudang\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA9wCAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T03:31:16.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Sidebar.cshtml",
+              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Views\\Shared\\Sidebar.cshtml",
+              "RelativeDocumentMoniker": "Gudang\\Views\\Shared\\Sidebar.cshtml",
+              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Views\\Shared\\Sidebar.cshtml",
+              "RelativeToolTip": "Gudang\\Views\\Shared\\Sidebar.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACYAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-01T03:41:19.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Gudang\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Gudang\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-13T03:26:01.132Z",
               "EditorCaption": ""

@@ -1,0 +1,111 @@
+﻿@using Gudang.Models.Master
+@model List<MasterRole>
+@{
+}
+<div class="card">
+    <div class="card-body">
+        <h3>Master Role</h3>
+        <div class="row mb-3">
+            <div class="col-3">
+                <div class="form-group">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#filter-data"><i class="bi bi-filter"></i>Filter Data</button>
+                </div>
+            </div>
+            <div class="col-9 text-end">
+                <div class="form-group">
+                    <button class="btn btn-success"><i class="bi bi-filter"></i>Tambah Data</button>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered table-striped" id="myTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Role</th>
+                    <th>Deskripsi</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="filter-data" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Filter Data</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Status</label>
+                    <select name="filtered-status" id="filtered-status" class="form-control">
+                        <option value="true" selected>ENABLE</option>
+                        <option value="false">DISABLE</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary" onclick="applyFilter()">Terapkan</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function loadtable(){
+        $(function () {
+          let status = $('#filtered-status').val();
+          $.fn.dataTable.ext.errMode = 'none';
+            if ($.fn.DataTable.isDataTable('#myTable')) {
+                $('#myTable').DataTable().clear().destroy();
+            }
+          $('#myTable')
+            .on('error.dt', function (e, settings, techNote, message) {
+              console.error('DataTables error:', message);
+            })
+            .DataTable({
+              processing: true,
+              serverSide: true,
+              ajax: {
+                url: '/Role/GetRoles?status='+status,
+                type: 'POST',
+              },
+              columns: [
+                { data: 'roleId', defaultContent: '' },
+                { data: 'roleName', defaultContent: '' },
+                { data: 'roleDescription', defaultContent: '' },
+                {
+                  data: 'status',
+                  render: d => d
+                    ? '<span class="badge bg-success">Enable</span>'
+                    : '<span class="badge bg-danger">Disable</span>',
+                  defaultContent: ''
+                },
+                {
+                  data: null,
+                  render: (row) => `
+                  <button class="btn btn-primary" data-id="${row.roleId ?? ''}"><i class="bi bi-pencil"></i> Edit</button> 
+                  <button class="btn btn-danger" data-id="${row.roleId ?? ''}"><i class="bi bi-trash"></i> Hapus</button>`,
+                  orderable: false,
+                  searchable: false
+                }
+              ]
+            });
+        });
+    }
+
+    // dipanggil saat klik "Terapkan"
+    function applyFilter() {
+      currentStatus = $('#filtered-status').val() ?? "";
+      loadtable();
+      $('#filter-data').modal('hide');
+
+    }
+
+    // panggil sekali saat halaman siap (tanpa filter)
+    $(function(){ loadtable(); });
+</script>
