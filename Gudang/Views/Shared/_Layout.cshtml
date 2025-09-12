@@ -14,9 +14,43 @@
 </head>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script>
+    function showAlert(message, type = "success", timeout = 2000) {
+      // type: success, danger, warning, info
+      const icons = {
+        success: "bi-check-circle-fill",
+        danger: "bi-x-circle-fill",
+        warning: "bi-exclamation-triangle-fill",
+        info: "bi-info-circle-fill"
+      };
+
+      const alertId = "alert-" + Date.now();
+      const alertHtml = `
+        <div id="${alertId}" class="alert alert-${type} alert-dismissible fade show shadow-sm d-flex align-items-center" role="alert" style="min-width:300px; max-width:400px;">
+          <i class="bi ${icons[type]} me-2 fs-5"></i>
+          <div class="flex-grow-1">${message}</div>
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      `;
+
+      // Tambahkan alert ke container
+      document.getElementById("alert-container").insertAdjacentHTML("beforeend", alertHtml);
+
+      // Auto close
+      setTimeout(() => {
+        const alertEl = document.getElementById(alertId);
+        if (alertEl) {
+          const bsAlert = new bootstrap.Alert(alertEl);
+          bsAlert.close();
+        }
+      }, timeout);
+    }
+</script>
 <body class="page-wrap">
     @await Html.PartialAsync("Header")
     <div class="page-main">

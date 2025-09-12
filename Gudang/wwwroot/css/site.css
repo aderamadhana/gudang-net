@@ -13,8 +13,19 @@
     /* NEW: ukuran header & sidebar (desktop) */
     --header-h: 56px;
     --sidebar-w: 270px;
+    --dt-bg: #fff;
+    --dt-head-bg: #0f3555; /* ganti sesuai brand */
+    --dt-head-text: #fff;
+    --dt-row-alt: #f8fafc;
+    --dt-border: #e9eef5;
+    --dt-active: #2563eb;
+    --dt-active-2: #0ea5e9;
+    --dt-radius: 16px;
 }
 
+html, body {
+    overflow-x: auto !important;
+}
 body {
     font-family: 'Poppins',sans-serif;
     background: var(--bg);
@@ -28,7 +39,8 @@ body {
     left: 0;
     right: 0;
     z-index: 1030;
-    background: #fff;
+    background: #252b3b;
+    color: #fff !important;
     border-bottom: 1px solid rgba(15,23,42,.06);
 }
 
@@ -270,22 +282,191 @@ html, body {
         box-shadow: none;
     }
 }
-.dataTables_filter {
-    margin-bottom: 15px;
+
+:root{
+  --dt-bg:#fff;
+  --dt-head-bg:#0f3555;      /* ganti sesuai brand */
+  --dt-head-text:#fff;
+  --dt-row-alt:#f8fafc;
+  --dt-border:#e9eef5;
+  --dt-active:#2563eb;
+  --dt-active-2:#0ea5e9;
+  --dt-radius:16px;
 }
 
-#myTable {
-    border-collapse: collapse;
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+/* Card ringan */
+.dt-card{
+  background:var(--dt-bg);
+  border:1px solid var(--dt-border);
+  border-radius:var(--dt-radius);
+  box-shadow:0 10px 22px rgba(2,8,23,.06);
+  padding:18px;
 }
 
-/* Header */
+/* Dashboard */
+.btn-soft i {
+    vertical-align: -2px;
+}
+
+/* Card metric */
+.metric-card {
+    border: 1px solid var(--ring);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    background: var(--card);
+    height: 100%;
+}
+
+.metric-title {
+    font-weight: 600;
+    color: #6b7280;
+    font-size: .85rem;
+}
+
+.metric-value {
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: .2px;
+}
+
+.metric-trend.up {
+    color: var(--success);
+}
+
+.metric-trend.down {
+    color: var(--danger);
+}
+
+.icon-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: #ecfeff;
+    color: #0e7490;
+}
+
+/* Section cards */
+.panel {
+    border: 1px solid var(--ring);
+    border-radius: var(--radius);
+    background: var(--card);
+    box-shadow: var(--shadow);
+}
+
+.panel-header {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--ring);
+}
+
+.panel-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.kpi-mini .kpi {
+    border-right: 1px dashed var(--ring);
+}
+
+    .kpi-mini .kpi:last-child {
+        border-right: 0;
+    }
+
+.kpi .label {
+    color: var(--muted);
+    font-size: .85rem;
+}
+
+.kpi .value {
+    font-weight: 800;
+    font-size: 1.15rem;
+}
+
+.pill-group .btn {
+    --bs-btn-padding-y: .25rem;
+    --bs-btn-padding-x: .5rem;
+    --bs-btn-font-size: .8rem;
+}
+
+/* World map placeholder */
+.world {
+    background: radial-gradient(120px 70px at 22% 38%, #eaf1fb 40%, transparent 41%) no-repeat, radial-gradient(120px 70px at 72% 45%, #eaf1fb 40%, transparent 41%) no-repeat, radial-gradient(90px 60px at 58% 68%, #eaf1fb 40%, transparent 41%) no-repeat;
+    background-color: #f7fbff;
+    border: 1px dashed #dbe6ff;
+    height: 240px;
+    border-radius: 12px;
+}
+
+.progress.thin {
+    height: 8px;
+    background: #eef2f7;
+}
+
+    .progress.thin .progress-bar {
+        border-radius: 8px;
+    }
+
+.muted {
+    color: var(--muted);
+}
+
+/*.card-header {
+    background-color: #ccc;
+}*/
+
+@media (max-width: 991.98px) {
+    .metric-value {
+        font-size: 1.6rem;
+    }
+
+    .world {
+        height: 200px;
+    }
+}
+
+/**/
+
+/* Penuhi container & jangan memaksa tabel melebar */
+#myTable, table.dataTable {
+    width: 100% !important;
+    table-layout: fixed;
+}
+
+    /* Bungkus teks (override bawaan DataTables/Bootstrap yang suka nowrap) */
+    #myTable th, #myTable td {
+        white-space: normal !important;
+        word-break: break-word;
+    }
+
+        /* Kolom sempit biar tidak nabrak */
+        #myTable th:nth-child(1), #myTable td:nth-child(1) {
+            width: 60px;
+            text-align: center;
+        }
+
+        #myTable th:nth-child(5), #myTable td:nth-child(5) {
+            width: 160px;
+        }
+
+/* Kalau tetap pakai .table-responsive, jangan paksa scroll-x */
+.table-responsive {
+    overflow-x: visible !important;
+}
+
+#myTable td:last-child .btn {
+    white-space: normal;
+}
+
+#myTable td:last-child .btn {
+    padding: .25rem .5rem;
+}
+
+.dataTables_length{
+    margin-bottom: 10px;
+}
+/* btn-sm */
 #myTable thead th {
-    background-color: #002f63; /* biru tua */
-    color: #fff;
-    padding: 12px;
-    text-align: left;
-    border-bottom: 2px solid #ccc;
+    background-color: #252b3b !important;
+    color: #fff !important;
 }

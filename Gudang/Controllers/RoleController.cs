@@ -17,6 +17,11 @@ namespace Gudang.Controllers
             var roles = context.MasterRoles.ToList();
             return View(roles);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult getRoles(bool status) {
 
