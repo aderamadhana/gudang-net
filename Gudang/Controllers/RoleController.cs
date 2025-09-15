@@ -1,16 +1,20 @@
-﻿using Gudang.Services;
+﻿using Gudang.Models.Master;
+using Gudang.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 namespace Gudang.Controllers
 {
     public class RoleController : Controller
     {
         private readonly ApplicationDbContext context;
+        private readonly IWebHostEnvironment environtment;
 
-        public RoleController(ApplicationDbContext context)
+        public RoleController(ApplicationDbContext context, IWebHostEnvironment environtment)
         {
             this.context = context;
+            this.environtment = environtment;
         }
         public IActionResult Index()
         {
@@ -20,6 +24,32 @@ namespace Gudang.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Create(MasterRoleModel masterRoleModel)
+        {
+            if (!Regex.IsMatch(masterRoleModel.RoleName, @"^[a-zA-Z0-9\s]+$"))
+            {
+                ModelState.AddModelError("RoleName", "Role Name cannot use spesial character");
+            }
+
+            if (!ModelState.IsValid) {
+                return View(masterRoleModel);
+            }
+
+            MasterRole role = new MasterRole()
+            {
+                RoleName = masterRoleModel.RoleName,
+                RoleDescription = masterRoleModel.RoleDescription,
+                Status = true,
+                CreatedAt = DateTime.Now,
+                CreatedBy = 1
+            };
+
+            context.MasterRoles.Add(role);
+            context.SaveChanges();
+
+            return RedirectToAction("Index", "Role");
         }
 
         [HttpPost]

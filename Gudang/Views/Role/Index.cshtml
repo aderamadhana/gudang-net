@@ -34,20 +34,22 @@
     </div>
     <div class="card-body">
         <!-- Table -->
-        <table class="table table-hover align-middle" id="myTable">
-            <thead class="table-primary text-center" >
-                <tr>
-                    <th style="width: 5%;">No</th>
-                    <th>Nama Role</th>
-                    <th>Deskripsi</th>
-                    <th style="width: 5%;">Status</th>
-                    <th style="width: 15%;">Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- data via DataTables -->
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle" id="myTable">
+                <thead class="table-primary text-center">
+                    <tr>
+                        <th style="width: 5%;">No</th>
+                        <th>Nama Role</th>
+                        <th>Deskripsi</th>
+                        <th style="width: 5%;">Status</th>
+                        <th style="width: 15%;">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- data via DataTables -->
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
@@ -105,20 +107,17 @@
 <!-- Template alert (akan dipanggil lewat JS) -->
 <script>   
     showAlert("Data berhasil disimpan!", "success");
+    let dt = null;
     function loadtable(){
-        $(function () {
-          let status = $('#filtered-status').val();
-          $.fn.dataTable.ext.errMode = 'none';
-            if ($.fn.DataTable.isDataTable('#myTable')) {
-                $('#myTable').DataTable().clear().destroy();
-            }
-          $('#myTable')
-            .on('error.dt', function (e, settings, techNote, message) {
-              console.error('DataTables error:', message);
-            })
-            .DataTable({
-              processing: true,
-              serverSide: true,scrollX: false,
+        if (dt) {
+            dt.ajax.reload(null, false);        // bawa param filter via ajax.data
+            return;
+        }
+        let status = $('#filtered-status').val();
+        dt = $('#myTable').DataTable({
+            processing: true,
+              serverSide: true,
+              scrollX: false,
               ajax: {
                 url: '/Role/GetRoles?status='+status,
                 type: 'POST',
@@ -149,10 +148,9 @@
                   searchable: false
                 }
               ]
-            });
         });
 
-            $('#myTable').removeClass('dataTable no-footer');
+        $('#myTable').removeClass('dataTable no-footer');
     }
 
     // dipanggil saat klik "Terapkan"
@@ -160,6 +158,7 @@
       currentStatus = $('#filtered-status').val() ?? "";
       loadtable();
       $('#filter-data').modal('hide');
+      $('#myTable').DataTable().columns.adjust();
 
     }
 

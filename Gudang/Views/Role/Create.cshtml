@@ -1,25 +1,30 @@
-﻿@{
+﻿@model Gudang.Models.Master.MasterRoleModel
+@{
 }
 <div class="row">
     <div class="col-8">
         <div class="card">
             <div class="card-body">
-                <h3>Tambah Role</h3>
-                <div class="col mb-3">
-                    <div class="form-group">
-                        <label>Nama Role</label>
-                        <input type="text" name="dt['RoleName']" class="form-control" />
+                <form method="post" enctype="multipart/form-data">
+                    <h3>Tambah Role</h3>
+                    <div class="col mb-3">
+                        <div class="form-group">
+                            <label>Nama Role <span class="text-danger">*</span></label>
+                            <input type="text" asp-for="RoleName" class="form-control" />
+                            <span asp-validation-for="RoleName" class="text-danger"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="col mb-3">
-                    <div class="form-group">
-                        <label>Keterangan</label>
-                        <textarea type="text" name="dt['RoleDescription']" class="form-control"> </textarea>
+                    <div class="col mb-3">
+                        <div class="form-group">
+                            <label>Deskripsi Role <span class="text-danger">*</span></label>
+                            <textarea type="text" asp-for="RoleDescription" class="form-control"> </textarea>
+                            <span asp-validation-for="RoleDescription" class="text-danger"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="col text-end mb-3">
-                    <div class="btn btn-primary"> <i class="bi bi-save"></i> Simpan</div>
-                </div>
+                    <div class="col text-end mb-3">
+                        <button type="submit" class="btn btn-primary"> <i class="bi bi-save"></i> Simpan</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

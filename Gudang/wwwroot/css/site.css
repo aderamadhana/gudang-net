@@ -433,25 +433,25 @@ html, body {
     table-layout: fixed;
 }
 
-    /* Bungkus teks (override bawaan DataTables/Bootstrap yang suka nowrap) */
-    #myTable th, #myTable td {
-        white-space: normal !important;
-        word-break: break-word;
-    }
+/* Bungkus teks (override bawaan DataTables/Bootstrap yang suka nowrap) */
+#myTable th, #myTable td {
+    white-space: normal !important;
+    word-break: break-word;
+}
 
-        /* Kolom sempit biar tidak nabrak */
-        #myTable th:nth-child(1), #myTable td:nth-child(1) {
-            width: 60px;
-            text-align: center;
-        }
+/* Kolom sempit biar tidak nabrak */
+#myTable th:nth-child(1), #myTable td:nth-child(1) {
+    width: 60px;
+    text-align: center;
+}
 
-        #myTable th:nth-child(5), #myTable td:nth-child(5) {
-            width: 160px;
-        }
+#myTable th:nth-child(5), #myTable td:nth-child(5) {
+    width: 160px;
+}
 
 /* Kalau tetap pakai .table-responsive, jangan paksa scroll-x */
 .table-responsive {
-    overflow-x: visible !important;
+    overflow-x: auto;
 }
 
 #myTable td:last-child .btn {
@@ -469,4 +469,12 @@ html, body {
 #myTable thead th {
     background-color: #252b3b !important;
     color: #fff !important;
+}
+.dataTables_wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+#myTable, table.dataTable {
+    width: 100% !important;
 }
