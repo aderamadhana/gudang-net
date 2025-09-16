@@ -54,8 +54,7 @@
               "RelativeToolTip": "Gudang\\wwwroot\\css\\site.css",
               "ViewState": "AgIAAMQBAAAAAAAAAADwv9wBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-15T03:50:59.437Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T03:50:59.437Z"
             },
             {
               "$type": "Document",
@@ -65,7 +64,7 @@
               "RelativeDocumentMoniker": "Gudang\\Views\\Role\\Index.cshtml",
               "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Views\\Role\\Index.cshtml",
               "RelativeToolTip": "Gudang\\Views\\Role\\Index.cshtml",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAQwHkAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwGoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-15T03:22:30.346Z",
               "EditorCaption": ""
@@ -80,8 +79,7 @@
               "RelativeToolTip": "Gudang\\Controllers\\RoleController.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAUwCcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T03:10:56.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T03:10:56.477Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "Gudang\\Models\\Master\\MasterRoleModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T03:12:12.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T03:12:12.245Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "Gudang\\Models\\Master\\MasterRole.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T03:11:08.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T03:11:08.469Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "Gudang\\Views\\Role\\Create.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-15T03:09:24.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T03:09:24.795Z"
             }
           ]
         }

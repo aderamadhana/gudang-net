@@ -1,3 +1,7 @@
+# ======================
+# .NET / Visual Studio
+# ======================
+
 # Build hasil compile
 bin/
 obj/
@@ -26,4 +30,10 @@ project.fragment.lock.json
 # Config sensitive
 *.env
 appsettings.*.json
-Gudang/
+
+
+# ======================
+# Custom tambahan
+# ======================
+
+# Abaikan folder Gudang dan ProjectEvaluation
