@@ -26,3 +26,4 @@ project.fragment.lock.json
 # Config sensitive
 *.env
 appsettings.*.json
+Gudang/
