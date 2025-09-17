@@ -10,7 +10,7 @@
             <div class="row g-2 align-items-center">
                 <!-- Filter -->
                 <div class="col-12 col-md-3">
-                    <button class="btn btn-outline-primary w-50" data-bs-toggle="modal" data-bs-target="#filter-data">
+                    <button class="btn btn-outline-dark w-50" data-bs-toggle="modal" data-bs-target="#filter-data">
                         <i class="bi bi-funnel"></i> Filter Data
                     </button>
                 </div>
@@ -35,14 +35,14 @@
     <div class="card-body">
         <!-- Table -->
         <div class="table-responsive">
-            <table class="table table-hover align-middle" id="myTable">
+            <table class="table table-hover table-bordered table-striped align-middle" id="myTable">
                 <thead class="table-primary text-center">
                     <tr>
-                        <th style="width: 5%;">No</th>
+                        <th style="width: 10%;">No</th>
                         <th>Nama Role</th>
                         <th>Deskripsi</th>
-                        <th style="width: 5%;">Status</th>
-                        <th style="width: 15%;">Aksi</th>
+                        <th>Status</th>
+                        <th style="width: 10%;">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -105,22 +105,17 @@
 <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1060;"></div>
 
 <!-- Template alert (akan dipanggil lewat JS) -->
-<script>   
-    showAlert("Data berhasil disimpan!", "success");
-    let dt = null;
+<script>
     function loadtable(){
-        if (dt) {
-            dt.ajax.reload(null, false);        // bawa param filter via ajax.data
-            return;
-        }
+        $('#myTable').DataTable().clear().destroy();
         let status = $('#filtered-status').val();
-        dt = $('#myTable').DataTable({
-            processing: true,
+        $('#myTable').DataTable({
+              processing: true,
               serverSide: true,
               scrollX: false,
               ajax: {
-                url: '/Role/GetRoles?status='+status,
-                type: 'POST',
+                    url: '/Role/GetRoles?status='+status,
+                    type: 'POST',
               },
               columns: [
                 {
@@ -137,15 +132,30 @@
                     ? `<span class="badge bg-success" onclick="changeStatus('${row.roleId}', false)">Enable</span>`
                     : `<span class="badge bg-danger" onclick="changeStatus('${row.roleId}', true)">Disable</span>`;
                   },
-                  defaultContent: ''
+                  defaultContent: '',
+                  className:'text-center'
                 },
                 {
                   data: null,
-                  render: (row) => `
-                  <button class="btn btn-sm me-2 btn-primary" onclick="editData('${row.roleId}')" data-id="${row.roleId ?? ''}"><i class="bi bi-pencil"></i> Edit</button>
-                  <button class="btn btn-sm me-2 btn-danger" onclick="hapusData('${row.roleId}')" data-id="${row.roleId ?? ''}"><i class="bi bi-trash"></i> Hapus</button>`,
+                  render: (d, type, row) => {
+                      const id   = row.roleId ?? '';
+                      const name = String(row.roleName ?? '').replace(/"/g, '&quot;');
+
+                      return row.status
+                          ? `<a href="/Role/Edit/${id}"
+                               class="btn btn-sm btn-primary me-2"
+                               onclick="return confirmEdit(event, this)">
+                              <i class="bi bi-pencil"></i> Edit
+                            </a>`
+                        : `<button class="btn btn-sm me-2 btn-danger"
+                                   data-id="${id}" data-name="${name}"
+                                   onclick="hapusData(this)">
+                             <i class="bi bi-trash"></i> Hapus
+                           </button>`;
+                  },
                   orderable: false,
-                  searchable: false
+                  searchable: false,
+                  className: "text-center"
                 }
               ]
         });
@@ -181,22 +191,36 @@
         }).then((result) => {
             if (result.isConfirmed) {
             // Contoh hit API pakai fetch
-            fetch(`/api/roles/${id}/toggle-status`, {
+            fetch(`/Role/ChangeStatus/${data_id}?status=${status}`, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ currentStatus: status })
+                }
             })
             .then(res => res.json())
             .then(data => {
-                Swal.fire('Berhasil!', 'Status berhasil diubah.', 'success');
-                // Refresh datatable setelah update
-                $('#myTable').DataTable().ajax.reload(null, false);
+                if(data.success == true){
+                    Swal.fire({
+                          icon: "success",
+                          title: "Berhasil!",
+                          text: data.message
+                    });
+                    loadtable();
+                }else{
+                    Swal.fire({
+                          icon: "error",
+                          title: "Gagal!",
+                          text: data.message
+                    });
+                    loadtable();
+                }
             })
             .catch(err => {
-                Swal.fire('Error!', 'Terjadi kesalahan saat update.', 'error');
-                console.error(err);
+                Swal.fire({
+                    icon: "error",
+                    title: "Gagal!",
+                    text: err
+                });
             });
             }
         });
@@ -212,10 +236,10 @@
     }
 
     // hapus data
-    function hapusData(data_id){
+    function hapusData(data_id, data_nama){
         Swal.fire({
             title: 'Apakah Anda yakin?',
-            text: `Ubah status Role ID: #${data_id} ?`,
+            text: `Hapus data role : ${data_nama} ?`,
             icon: 'warning',
             showCancelButton: true,
             confirmButtonText: 'Ya',
@@ -223,21 +247,36 @@
         }).then((result) => {
             if (result.isConfirmed) {
             // Contoh hit API pakai fetch
-            fetch(`/api/roles/${id}/toggle-status`, {
+            fetch(`/Role/Delete/${data_id}`, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ currentStatus: status })
             })
             .then(res => res.json())
             .then(data => {
-                Swal.fire('Berhasil!', 'Status berhasil diubah.', 'success');
-                // Refresh datatable setelah update
-                $('#myTable').DataTable().ajax.reload(null, false);
+                if(data.success == true){
+                    Swal.fire({
+                          icon: "success",
+                          title: "Berhasil!",
+                          text: data.message
+                    });
+                    loadtable();
+                }else{
+                    Swal.fire({
+                          icon: "error",
+                          title: "Gagal!",
+                          text: data.message
+                    });
+                    loadtable();
+                }
             })
             .catch(err => {
-                Swal.fire('Error!', 'Terjadi kesalahan saat update.', 'error');
+                Swal.fire({
+                    icon: "error",
+                    title: "Gagal!",
+                    text: err
+                });
                 console.error(err);
             });
             }
