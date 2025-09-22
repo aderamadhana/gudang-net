@@ -21,9 +21,9 @@
                         <a class="btn btn-outline-success" asp-controller="Role" asp-action="Create">
                             <i class="bi bi-plus-circle"></i> Tambah Data
                         </a>
-                        <a class="btn btn-success" asp-controller="Role" asp-action="Export">
+                        <button class="btn btn-success" onclick="exportData()">
                             <i class="bi bi-file-earmark-excel"></i> Export
-                        </a>
+                        </button>
                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#import-data">
                             <i class="bi bi-file-earmark-arrow-up"></i> Import
                         </button>
@@ -86,17 +86,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <a class="btn btn-outline-success mb-2">
+                <a class="btn btn-outline-success mb-2" href="/template_import/template_master_role.xlsx")"
+                   download>
                     <i class="bi bi-file-earmark-excel"></i> Download File
                 </a>
                 <div class="form-group">
                     <label>Upload File (.xlsx)</label>
-                    <input type="file" class="form-control" name="file" />
+                    <input type="file" id="file" class="form-control" name="file" />
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-primary">Simpan</button>
+                <button type="button" class="btn btn-primary" onclick="importData()">Simpan</button>
             </div>
         </div>
     </div>
@@ -129,8 +130,8 @@
                   data: 'status',
                   render: (d, type, row) => {
                     return d
-                    ? `<span class="badge bg-success" onclick="changeStatus('${row.roleId}', false)">Enable</span>`
-                    : `<span class="badge bg-danger" onclick="changeStatus('${row.roleId}', true)">Disable</span>`;
+                    ? `<span class="badge bg-success" onclick="changeStatus('${row.roleId}', false)">ENABLE</span>`
+                    : `<span class="badge bg-danger" onclick="changeStatus('${row.roleId}', true)">DISABLE</span>`;
                   },
                   defaultContent: '',
                   className:'text-center'
@@ -149,7 +150,7 @@
                             </a>`
                         : `<button class="btn btn-sm me-2 btn-danger"
                                    data-id="${id}" data-name="${name}"
-                                   onclick="hapusData(this)">
+                                   onclick="hapusData('${id}','${name}')">
                              <i class="bi bi-trash"></i> Hapus
                            </button>`;
                   },
@@ -200,39 +201,52 @@
             .then(res => res.json())
             .then(data => {
                 if(data.success == true){
-                    Swal.fire({
-                          icon: "success",
-                          title: "Berhasil!",
-                          text: data.message
-                    });
+                    showAlert(data.message, "success");
                     loadtable();
                 }else{
-                    Swal.fire({
-                          icon: "error",
-                          title: "Gagal!",
-                          text: data.message
-                    });
+
+                    showAlert(data.message, "error");
                     loadtable();
                 }
             })
             .catch(err => {
-                Swal.fire({
-                    icon: "error",
-                    title: "Gagal!",
-                    text: err
-                });
+                showAlert(err, "error");
             });
             }
         });
     }
 
-    // edit data
-    function editData(data_id){
-        Swal.fire({
-            title: 'Apakah Anda yakin?',
-            text: `Edit Data Role ID: ${data_id}?`,
-            icon: 'warning',
-        })
+    function importData(){
+        var file = $("#file")[0];
+        if (!file.files.length) {
+            showAlert("Pilih file dulu.", "warning");
+            return;
+        }
+
+        var fd = new FormData();
+        fd.append("file", file.files[0]);
+
+        $.ajax({
+            url: "/Role/Import",
+            type: "POST",
+            data: fd,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                if(data.success == true){
+                    showAlert("Import sukses. Inserted: " + data.inserted + ".", "success");
+                    $("#file").val("");
+                    $('#import-data').modal('hide');
+                    loadtable();
+                }else{
+                    showAlert(data.message, "error");
+                    loadtable();
+                }
+            },
+            error: function (xhr) {
+                showAlert(xhr, "error");
+            }
+        });
     }
 
     // hapus data
@@ -256,30 +270,51 @@
             .then(res => res.json())
             .then(data => {
                 if(data.success == true){
-                    Swal.fire({
-                          icon: "success",
-                          title: "Berhasil!",
-                          text: data.message
-                    });
+                    showAlert(data.message, "success");
                     loadtable();
                 }else{
-                    Swal.fire({
-                          icon: "error",
-                          title: "Gagal!",
-                          text: data.message
-                    });
+                    showAlert(data.message, "error");
                     loadtable();
                 }
             })
             .catch(err => {
-                Swal.fire({
-                    icon: "error",
-                    title: "Gagal!",
-                    text: err
-                });
+                showAlert(err, "error");
                 console.error(err);
             });
             }
+        });
+    }
+
+    function exportData(){
+        const status = $('#filtered-status').val();
+
+        $.ajax({
+          url: '/Role/Export',
+          method: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({ status }),
+          xhrFields: { responseType: 'blob' }, // terima file sebagai blob
+          success: function (data, statusText, xhr) {
+            // Ambil nama file dari Content-Disposition kalau ada
+            const dispo = xhr.getResponseHeader('Content-Disposition') || '';
+            let fileName = 'export_master_role.xlsx';
+            const m = dispo.match(/filename\*=UTF-8''([^;]+)|filename="?([^"]+)"?/i);
+            if (m) fileName = decodeURIComponent(m[1] || m[2]);
+
+            // Buat link download sementara
+            const blob = new Blob([data], { type: xhr.getResponseHeader('Content-Type') || 'application/octet-stream' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+          },
+          error: function (xhr) {
+              showAlert('Gagal export: ' + xhr.status + ' ' + xhr.statusText, "error");
+          }
         });
     }
 </script>

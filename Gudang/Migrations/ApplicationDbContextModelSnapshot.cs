@@ -61,7 +61,7 @@ namespace Gudang.Migrations
 
                     b.HasKey("RoleId");
 
-                    b.ToTable("MasterRoles");
+                    b.ToTable("MasterRoles", (string)null);
                 });
 
             modelBuilder.Entity("Gudang.Models.Master.User", b =>
@@ -117,7 +117,7 @@ namespace Gudang.Migrations
 
                     b.HasKey("UserId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 #pragma warning restore 612, 618
         }
