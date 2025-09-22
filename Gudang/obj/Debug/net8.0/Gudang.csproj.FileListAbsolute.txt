@@ -341,3 +341,16 @@ D:\REPO\gudang-net\Gudang\obj\Debug\net8.0\refint\Gudang.dll
 D:\REPO\gudang-net\Gudang\obj\Debug\net8.0\Gudang.pdb
 D:\REPO\gudang-net\Gudang\obj\Debug\net8.0\Gudang.genruntimeconfig.cache
 D:\REPO\gudang-net\Gudang\obj\Debug\net8.0\ref\Gudang.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\ClosedXML.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\ClosedXML.Parser.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\ExcelNumberFormat.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\RBush.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\SixLabors.Fonts.dll
+D:\REPO\gudang-net\Gudang\bin\Debug\net8.0\System.IO.Packaging.dll

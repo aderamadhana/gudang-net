@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "D:\\REPO\\gudang-net\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\views\\role\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\views\\role\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\services\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\services\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\views\\role\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\views\\role\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\models\\master\\masterrolemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\models\\master\\masterrolemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\models\\master\\masterrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\models\\master\\masterrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|d:\\repo\\gudang-net\\gudang\\services\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFB64277-8BC8-4B23-8AC0-9D1CB9AD99B2}|Gudang\\Gudang.csproj|solutionrelative:gudang\\services\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,93 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Views\\Role\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Gudang\\Views\\Role\\Edit.cshtml",
-              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Views\\Role\\Edit.cshtml",
-              "RelativeToolTip": "Gudang\\Views\\Role\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-17T04:04:19.294Z",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Services\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Gudang\\Services\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Services\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Gudang\\Services\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T07:03:59.937Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Views\\Role\\Index.cshtml",
-              "RelativeDocumentMoniker": "Gudang\\Views\\Role\\Index.cshtml",
-              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Views\\Role\\Index.cshtml",
-              "RelativeToolTip": "Gudang\\Views\\Role\\Index.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAIsAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-15T03:22:30.346Z",
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Gudang\\Models\\ApplicationUser.cs",
+              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Gudang\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T06:44:51.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatabaseInitializer.cs",
+              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Services\\DatabaseInitializer.cs",
+              "RelativeDocumentMoniker": "Gudang\\Services\\DatabaseInitializer.cs",
+              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Services\\DatabaseInitializer.cs",
+              "RelativeToolTip": "Gudang\\Services\\DatabaseInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T04:26:43.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "Gudang\\Controllers\\RoleController.cs",
-              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "Gudang\\Controllers\\RoleController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAtwEoAAAA1AAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Program.cs",
+              "RelativeDocumentMoniker": "Gudang\\Program.cs",
+              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Program.cs",
+              "RelativeToolTip": "Gudang\\Program.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAASwDMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T03:10:56.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MasterRoleModel.cs",
-              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Models\\Master\\MasterRoleModel.cs",
-              "RelativeDocumentMoniker": "Gudang\\Models\\Master\\MasterRoleModel.cs",
-              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Models\\Master\\MasterRoleModel.cs",
-              "RelativeToolTip": "Gudang\\Models\\Master\\MasterRoleModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T03:12:12.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MasterRole.cs",
-              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Models\\Master\\MasterRole.cs",
-              "RelativeDocumentMoniker": "Gudang\\Models\\Master\\MasterRole.cs",
-              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Models\\Master\\MasterRole.cs",
-              "RelativeToolTip": "Gudang\\Models\\Master\\MasterRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T03:11:08.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Views\\Role\\Create.cshtml",
-              "RelativeDocumentMoniker": "Gudang\\Views\\Role\\Create.cshtml",
-              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Views\\Role\\Create.cshtml",
-              "RelativeToolTip": "Gudang\\Views\\Role\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-15T03:09:24.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\REPO\\gudang-net\\Gudang\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Gudang\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\REPO\\gudang-net\\Gudang\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Gudang\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAADMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-17T02:20:51.268Z",
+              "WhenOpened": "2025-09-22T04:23:26.633Z",
               "EditorCaption": ""
             }
           ]
